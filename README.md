@@ -1,8 +1,55 @@
-# Project Title
+# pgls
 
-[![GitHub license](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE) [![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-brightgreen.svg)](./CONTRIBUTING.md)
+**pgls** is a CLI tool to fetch and list links and domains from a given URL, with options for filtering internal or external links.
 
-This is another Open Source Project.
+### Installation
+
+You can quickly install Pgls by running the following command in your terminal:
+
+```sh
+curl -fsSL https://raw.githubusercontent.com/ranajahanzaib/pgls/main/install.sh | sudo bash
+```
+
+**Note**: Ensure you have sudo privileges as the script moves the binary to a system directory.
+
+## Usage
+
+The utility accepts the following command-line arguments:
+
+```sh
+pgls 0.1
+A CLI tool to fetch and list links and domains from a given URL, with options for filtering internal or external links.
+
+USAGE:
+pgls [OPTIONS]
+
+OPTIONS:
+domains      # List all domains mentioned on the page
+links        # List all links mentioned on the page
+  --external # List only external links
+  --internal # List only internal links
+
+```
+
+#### Example
+
+List all links from a Wikipedia page:
+
+```sh
+pgls links https://en.m.wikipedia.org/
+```
+
+List all external links from a Wikipedia page:
+
+```sh
+pgls links https://en.m.wikipedia.org/ --external
+```
+
+List all domains from a Wikipedia page:
+
+```sh
+pgls domains https://en.m.wikipedia.org/
+```
 
 ## Contributing
 
